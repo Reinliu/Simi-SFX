@@ -18,33 +18,39 @@
 
 
     <div class='section'>
-        <h1>DDSP-SFX: Acoustically-guided sound effects generation with DDSP</h1>
+        <h1>A similarity-based conditioning method for controllable sound effects synthesis</h1>
         <div class="author-section">
             <span class="author-block">
-                Yunyi Liu<sup>1,2*</sup>,</span>
+                Yunyi Liu
                 <span class="author-block">
-                Craig Jin, <sup>1</sup></span>
-                <span class="author-block">
-                David Gunawan<sup>2</sup>
+                Craig Jin
                 </span>
         </div>
         <div class="is-size-5 publication-authors">
-            <span class="author-block"><sup>1</sup>University of Sydney<br><sup>2</sup>Dolby Laboratories, Inc</span>
-            <span class="eql-cntrb"><small><br><sup>*</sup>Work done while interning at Dolby</small></span>
+            <span class="author-block">Computing and Audio Research Laboratory, Department of Eletrical and Information Engineering, The University of
+                Sydney, Sydney, Australia</span>
           </div>
 
         <img src="images/Architecture.png" alt="Description of the image" class="author-image">
 
 
-        <p>Deep audio generative networks typically require large amounts of data and computational resources, while relying on 
-            excessive descriptive ground-truth labels to guide the sound generation. Differentiable digital signal processing(DDSP) 
-            is a variant of neural audio synthesis models that employ digital signal processing modules as part of the neural network architecture. 
-            By incorporating pre-processed audio features as conditioning vectors along with pre-written digital synthesizers it is capable of 
-            synthesizing high-quality musical audio and controlling the acoustic characteristics(pitch and loudness) of the sounds. However, 
-            due to the limitation of its design, DDSP has its weaknesses in synthesizing impulsive signals and providing nuanced control over the
-            complex timbres of the sound effects. To this end we incorporate Verma's method to synthesize impulsive signals into the DDSP architecture.
-            Below we show the performance of sound synthesized from DDSP and our approach, DDSP-SFX. We use a reference sound effect and perform timbre transfer
-            by extracting the required audio features as input to the decoder. 
+        <p>Generating sound effects with controllable variations is a challenging task, traditionally
+            addressed using sophisticated physical models that require in-depth knowledge of signal processing
+            parameters and algorithms. In the era of generative and large language models, text has
+            emerged as a common, human-interpretable interface for controlling sound synthesis. However,
+            the discrete and qualitative nature of language tokens makes it difficult to capture subtle
+            timbral variations across different sounds. In this research, we propose a novel similarity-based
+            conditioning method for sound synthesis, leveraging differentiable digital signal processing
+            (DDSP). This approach combines the use of latent space for learning and controlling audio
+            timbre with an intuitive guiding vector, normalized within the range [0,1], to encode categorical
+            acoustic information. By utilizing pre-trained audio representation models, our method
+            achieves expressive and fine-grained timbre control. To benchmark our approach, we introduce
+            two sound effect datasets–Footstep-set and Impact-set–designed to evaluate both controllability
+            and sound quality. Regression analysis demonstrates that the proposed similarity
+            score effectively controls timbre variations and enables creative applications such as timbre
+            interpolation between discrete classes. Our work provides a robust and versatile framework
+            for sound effect synthesis, bridging the gap between traditional signal processing and modern
+            machine learning techniques. 
             
         </p>
     </div>
