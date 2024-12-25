@@ -1,2 +1,2 @@
-# SCDDSP
-A similarity-conditioned DDSP model for controllable sound effects synthesis
+# Simi-Foley
+A similarity-conditioned DDSP model for controllable Foley sound effects synthesis
