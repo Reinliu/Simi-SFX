@@ -164,7 +164,16 @@
   <div class="hero-body">
     <div class="container">
       <h2 class="title">Regression analysis of the timbre control</h2>
-
+      We plot the calculated Mahalanobis Distance between the generated sound and the reference sound by interpolating the input similarity score from
+      0 to 1. The relationship between the normalized MD of each synthesized sound and its conditioning similarity score closely follows an exponential trend. 
+      Ordinary Least Squares (OLS) regression yields a mean $R^2$ value of 0.4774 for the Footstep-set model and 0.6041 for the Impact-set model, indicating 
+      a strong correlation between the independent variable $c$ and the dependent variable $y$.
+      
+      The plots reveal that almost all sound categories exhibit clear separations between the presence of a particular feature (at c = 0) and its absence 
+      (at c = 1). This demonstrates that the model successfully learns to output distinct timbres based on the proposed similarity scores. Additionally, 
+      the regression lines indicate a positive correlation between the normalized MD and the input similarity scores. This suggests that the conditioning 
+      method effectively encodes timbral information unique to different sounds, independent of other acoustic features such as loudness and spectral centroid, 
+      which were held constant during this test.
       <img src="images/Regression_analysis.png" alt="Regression Analysis of Timbre Control" style="width: 100%; max-width: 1400px; height: auto;">
     </div>
   </div>
