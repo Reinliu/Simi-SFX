@@ -295,55 +295,76 @@
   <!-- More rows can be added below following the same structure -->
 </div>
 
-<!-- Example Sounds Section -->
+
+<!-- Model Comparison Table -->
 <section class="section">
   <div class="container is-max-desktop">
     <h2 class="title has-text-centered">Example Outputs from Simi-SFX</h2>
     <p class="has-text-centered" style="margin-bottom: 30px;">
-      The following examples showcase synthesized sound effects conditioned on different similarity scores. Each row corresponds to a specific reference category and displays four generated variants demonstrating timbral variation.
+      The following examples compare synthesized audio from four models across different sound categories. Each row corresponds
+      to a specific reference sound, and each column presents a variant synthesized by a different method.
     </p>
 
-    <!-- Sound Example Row -->
-    <div class="columns is-multiline is-centered">
-      <!-- Subtitle Column -->
-      <div class="column is-2 has-text-centered">
-        <h3 class="subtitle is-6">Footstep on Gravel</h3>
-      </div>
-      <!-- Sound 1 -->
+    <!-- Top Row: Model Names -->
+    <div class="columns is-vcentered is-centered is-variable is-6">
+      <div class="column is-2 has-text-centered"><strong>Category</strong></div>
+      <div class="column is-2 has-text-centered"><strong>Simi-SFX</strong></div>
+      <div class="column is-2 has-text-centered"><strong>NoiseBandNet</strong></div>
+      <div class="column is-2 has-text-centered"><strong>DDSP</strong></div>
+      <div class="column is-2 has-text-centered"><strong>ICGAN</strong></div>
+    </div>
+
+    <!-- Row: Footsteps -->
+    <div class="columns is-vcentered is-centered is-variable is-6" style="margin-bottom: 2rem;">
+      <div class="column is-2 has-text-centered"><strong>Footstep<br>0334</strong></div>
       <div class="column is-2 has-text-centered">
         <audio controls>
-          <source src="examples/gravel_1.wav" type="audio/wav">
-          Your browser does not support the audio tag.
+          <source src="sounds/Footsteps/simi_0334.wav" type="audio/wav">
         </audio>
       </div>
-      <!-- Sound 2 -->
       <div class="column is-2 has-text-centered">
         <audio controls>
-          <source src="examples/gravel_2.wav" type="audio/wav">
-          Your browser does not support the audio tag.
+          <source src="sounds/Footsteps/nbn_0334.wav" type="audio/wav">
         </audio>
       </div>
-      <!-- Sound 3 -->
       <div class="column is-2 has-text-centered">
         <audio controls>
-          <source src="examples/gravel_3.wav" type="audio/wav">
-          Your browser does not support the audio tag.
+          <source src="sounds/Footsteps/ddsp_0334.wav" type="audio/wav">
         </audio>
       </div>
-      <!-- Sound 4 -->
       <div class="column is-2 has-text-centered">
         <audio controls>
-          <source src="examples/gravel_4.wav" type="audio/wav">
-          Your browser does not support the audio tag.
+          <source src="sounds/Footsteps/icgan_0334.wav" type="audio/wav">
         </audio>
       </div>
     </div>
 
-    <!-- Add more rows below as needed for different categories -->
-
+    <!-- Row: Impacts -->
+    <div class="columns is-vcentered is-centered is-variable is-6" style="margin-bottom: 2rem;">
+      <div class="column is-2 has-text-centered"><strong>Impact<br>0140</strong></div>
+      <div class="column is-2 has-text-centered">
+        <audio controls>
+          <source src="sounds/Impacts/simi_0140.wav" type="audio/wav">
+        </audio>
+      </div>
+      <div class="column is-2 has-text-centered">
+        <audio controls>
+          <source src="sounds/Impacts/nbn_0140.wav" type="audio/wav">
+        </audio>
+      </div>
+      <div class="column is-2 has-text-centered">
+        <audio controls>
+          <source src="sounds/Impacts/ddsp-0140.wav" type="audio/wav">
+        </audio>
+      </div>
+      <div class="column is-2 has-text-centered">
+        <audio controls>
+          <source src="sounds/Impacts/icgan_0140.wav" type="audio/wav">
+        </audio>
+      </div>
+    </div>
   </div>
 </section>
-<!-- End Example Sounds Section -->
 
 
 
