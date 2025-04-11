@@ -124,21 +124,20 @@
 <section class="hero teaser">
   <div class="container is-max-desktop">
     <div class="hero-body">
+      <div class="item has-text-centered">
+        <!-- Centered and Resized Image -->
+        <img src="images/LOGO.png" alt="MY ALT TEXT" style="width: 450px; height: auto; margin-bottom: 30px;">
+      </div>
       <h2 class="subtitle has-text-centered">
-        <div class="item">
-          <!-- Your image here -->
-          <img src="images/ICDDSP-Similarity.png" alt="MY ALT TEXT" style="margin-bottom: 50px;">
-          <h2 class="subtitle has-text-centered">
-            <p>
-            Imagine a dataset with three categories of sounds, each with distinct timbre characteristics. We could use pre-trained audio representation
-            models such as CLAP to extract the embeddings for each sound in our dataset. For any sound, we could also obtains for embedding and compare its
-            similarity relative to each class by measuring its distance to the center of each embedding cluster. We take the idea from anomaly detection, 
-            where we measure the Mahalanobis distance between the reference audio embedding and the embedding clusters of each class by treating each
-            cluster as a Gaussian Distribution. The lower the distance, the more similar the sound is to that class. We could normalize the calculated 
-            Mahalanobis Distance to range [0,1] and incorporate this similarity score as a conditioning information representing the timbre of the sound
-            into the trianing process. 
-            </p>
-          </h2>
+        <p>
+          Imagine a dataset with three categories of sounds, each with distinct timbre characteristics. We could use pre-trained audio representation
+          models such as CLAP to extract the embeddings for each sound in our dataset. For any sound, we could also obtain its embedding and compare its
+          similarity relative to each class by measuring its distance to the center of each embedding cluster. We take the idea from anomaly detection, 
+          where we measure the Mahalanobis distance between the reference audio embedding and the embedding clusters of each class by treating each
+          cluster as a Gaussian Distribution. The lower the distance, the more similar the sound is to that class. We could normalize the calculated 
+          Mahalanobis Distance to range [0,1] and incorporate this similarity score as conditioning information representing the timbre of the sound
+          into the training process.
+        </p>
       </h2>
     </div>
   </div>
@@ -201,7 +200,9 @@
 
   The resulting spectrograms reveal a clear progression in timbre. Initially, the signals exhibit prominent harmonics in the higher frequencies, 
   characteristic of footsteps on metallic boards. As the interpolation progresses, these harmonics gradually transition into noisier signals lacking harmonic 
-  structure, which are indicative of footsteps on gravel.
+  structure, which are indicative of footsteps on gravel. 
+
+  For a more interactive experience, please visit our Colab notebook.
   <div class="container">
     <!-- Row 1 -->
     <section class="section">
@@ -295,7 +296,6 @@
   <!-- More rows can be added below following the same structure -->
 </div>
 
-
 <!-- Model Comparison Table -->
 <section class="section">
   <div class="container is-max-desktop">
@@ -307,62 +307,174 @@
 
     <!-- Top Row: Model Names -->
     <div class="columns is-vcentered is-centered is-variable is-6">
-      <div class="column is-2 has-text-centered"><strong>Category</strong></div>
-      <div class="column is-2 has-text-centered"><strong>Simi-SFX</strong></div>
-      <div class="column is-2 has-text-centered"><strong>NoiseBandNet</strong></div>
-      <div class="column is-2 has-text-centered"><strong>DDSP</strong></div>
-      <div class="column is-2 has-text-centered"><strong>ICGAN</strong></div>
+      <div class="column is-3 has-text-centered"><strong>Simi-SFX</strong></div>
+      <div class="column is-3 has-text-centered"><strong>NoiseBandNet</strong></div>
+      <div class="column is-3 has-text-centered"><strong>DDSP</strong></div>
+      <div class="column is-3 has-text-centered"><strong>ICGAN</strong></div>
     </div>
 
-    <!-- Row: Footsteps -->
+    <!-- Audio Rows -->
     <div class="columns is-vcentered is-centered is-variable is-6" style="margin-bottom: 2rem;">
-      <div class="column is-2 has-text-centered"><strong>Footstep<br>0334</strong></div>
-      <div class="column is-2 has-text-centered">
+      <div class="column is-3 has-text-centered">
         <audio controls>
-          <source src="sounds/Footsteps/simi_0334.wav" type="audio/wav">
+          <source src="sounds/Footsteps/simi-0340.wav" type="audio/wav">
         </audio>
       </div>
-      <div class="column is-2 has-text-centered">
+      <div class="column is-3 has-text-centered">
         <audio controls>
-          <source src="sounds/Footsteps/nbn_0334.wav" type="audio/wav">
+          <source src="sounds/Footsteps/noise-0340.wav" type="audio/wav">
         </audio>
       </div>
-      <div class="column is-2 has-text-centered">
+      <div class="column is-3 has-text-centered">
         <audio controls>
-          <source src="sounds/Footsteps/ddsp_0334.wav" type="audio/wav">
+          <source src="sounds/Footsteps/ddsp-0340.wav" type="audio/wav">
         </audio>
       </div>
-      <div class="column is-2 has-text-centered">
+      <div class="column is-3 has-text-centered">
         <audio controls>
-          <source src="sounds/Footsteps/icgan_0334.wav" type="audio/wav">
+          <source src="sounds/Footsteps/icgan-0340.wav" type="audio/wav">
         </audio>
       </div>
     </div>
 
-    <!-- Row: Impacts -->
     <div class="columns is-vcentered is-centered is-variable is-6" style="margin-bottom: 2rem;">
-      <div class="column is-2 has-text-centered"><strong>Impact<br>0140</strong></div>
-      <div class="column is-2 has-text-centered">
+      <div class="column is-3 has-text-centered">
         <audio controls>
-          <source src="sounds/Impacts/simi_0140.wav" type="audio/wav">
+          <source src="sounds/Footsteps/simi-0629.wav" type="audio/wav">
         </audio>
       </div>
-      <div class="column is-2 has-text-centered">
+      <div class="column is-3 has-text-centered">
         <audio controls>
-          <source src="sounds/Impacts/nbn_0140.wav" type="audio/wav">
+          <source src="sounds/Footsteps/noise-0629.wav" type="audio/wav">
         </audio>
       </div>
-      <div class="column is-2 has-text-centered">
+      <div class="column is-3 has-text-centered">
+        <audio controls>
+          <source src="sounds/Footsteps/ddsp-0629.wav" type="audio/wav">
+        </audio>
+      </div>
+      <div class="column is-3 has-text-centered">
+        <audio controls>
+          <source src="sounds/Footsteps/icgan-0629.wav" type="audio/wav">
+        </audio>
+      </div>
+    </div>
+
+    <div class="columns is-vcentered is-centered is-variable is-6" style="margin-bottom: 2rem;">
+      <div class="column is-3 has-text-centered">
+        <audio controls>
+          <source src="sounds/Footsteps/simi-0636.wav" type="audio/wav">
+        </audio>
+      </div>
+      <div class="column is-3 has-text-centered">
+        <audio controls>
+          <source src="sounds/Footsteps/noise-0636.wav" type="audio/wav">
+        </audio>
+      </div>
+      <div class="column is-3 has-text-centered">
+        <audio controls>
+          <source src="sounds/Footsteps/ddsp-0636.wav" type="audio/wav">
+        </audio>
+      </div>
+      <div class="column is-3 has-text-centered">
+        <audio controls>
+          <source src="sounds/Footsteps/icgan-0636.wav" type="audio/wav">
+        </audio>
+      </div>
+    </div>
+
+    <div class="columns is-vcentered is-centered is-variable is-6" style="margin-bottom: 2rem;">
+      <div class="column is-3 has-text-centered">
+        <audio controls>
+          <source src="sounds/Footsteps/simi-0334.wav" type="audio/wav">
+        </audio>
+      </div>
+      <div class="column is-3 has-text-centered">
+        <audio controls>
+          <source src="sounds/Footsteps/noise-0334.wav" type="audio/wav">
+        </audio>
+      </div>
+      <div class="column is-3 has-text-centered">
+        <audio controls>
+          <source src="sounds/Footsteps/ddsp-0334.wav" type="audio/wav">
+        </audio>
+      </div>
+      <div class="column is-3 has-text-centered">
+        <audio controls>
+          <source src="sounds/Footsteps/icgan-0334.wav" type="audio/wav">
+        </audio>
+      </div>
+    </div>
+
+    <div class="columns is-vcentered is-centered is-variable is-6" style="margin-bottom: 2rem;">
+      <div class="column is-3 has-text-centered">
+        <audio controls>
+          <source src="sounds/Impacts/simi-0140.wav" type="audio/wav">
+        </audio>
+      </div>
+      <div class="column is-3 has-text-centered">
+        <audio controls>
+          <source src="sounds/Impacts/noise-0140.wav" type="audio/wav">
+        </audio>
+      </div>
+      <div class="column is-3 has-text-centered">
         <audio controls>
           <source src="sounds/Impacts/ddsp-0140.wav" type="audio/wav">
         </audio>
       </div>
-      <div class="column is-2 has-text-centered">
+      <div class="column is-3 has-text-centered">
         <audio controls>
-          <source src="sounds/Impacts/icgan_0140.wav" type="audio/wav">
+          <source src="sounds/Impacts/icgan-0140.wav" type="audio/wav">
         </audio>
       </div>
     </div>
+
+    <div class="columns is-vcentered is-centered is-variable is-6" style="margin-bottom: 2rem;">
+      <div class="column is-3 has-text-centered">
+        <audio controls>
+          <source src="sounds/Impacts/simi-1112.wav" type="audio/wav">
+        </audio>
+      </div>
+      <div class="column is-3 has-text-centered">
+        <audio controls>
+          <source src="sounds/Impacts/noise-1112.wav" type="audio/wav">
+        </audio>
+      </div>
+      <div class="column is-3 has-text-centered">
+        <audio controls>
+          <source src="sounds/Impacts/ddsp-1112.wav" type="audio/wav">
+        </audio>
+      </div>
+      <div class="column is-3 has-text-centered">
+        <audio controls>
+          <source src="sounds/Impacts/icgan-1112.wav" type="audio/wav">
+        </audio>
+      </div>
+    </div>
+
+    <div class="columns is-vcentered is-centered is-variable is-6" style="margin-bottom: 2rem;">
+      <div class="column is-3 has-text-centered">
+        <audio controls>
+          <source src="sounds/Impacts/simi-1127.wav" type="audio/wav">
+        </audio>
+      </div>
+      <div class="column is-3 has-text-centered">
+        <audio controls>
+          <source src="sounds/Impacts/noise-1127.wav" type="audio/wav">
+        </audio>
+      </div>
+      <div class="column is-3 has-text-centered">
+        <audio controls>
+          <source src="sounds/Impacts/ddsp-1127.wav" type="audio/wav">
+        </audio>
+      </div>
+      <div class="column is-3 has-text-centered">
+        <audio controls>
+          <source src="sounds/Impacts/icgan-1127.wav" type="audio/wav">
+        </audio>
+      </div>
+    </div>
+
   </div>
 </section>
 
